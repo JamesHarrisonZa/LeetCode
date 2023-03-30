@@ -11,9 +11,9 @@ namespace LeetCode
          }
      }
 
-    public class Solution
+    public class AddTwoNumbers
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public ListNode Add(ListNode l1, ListNode l2)
         {
             var num1 = GetNumber(l1);
             var num2 = GetNumber(l2);
