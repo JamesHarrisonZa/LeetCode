@@ -19,4 +19,15 @@ public class ReverseIntegerTests
         var expected = 321;
         result.Should().Be(expected);
     }
+
+    [Fact]
+    public void GivenNegativeNumber()
+    {
+        var num = -123;
+
+        var result = reverseInteger.Reverse(num);
+
+        var expected = -321;
+        result.Should().Be(expected);
+    }
 }
