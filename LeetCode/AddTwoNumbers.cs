@@ -10,7 +10,6 @@ namespace LeetCode
              this.next = next;
          }
      }
-     
 
     public class Solution
     {
