@@ -1,8 +1,10 @@
-﻿namespace LeetCode;
+﻿using System.Numerics;
+
+namespace LeetCode;
 
 public class ReverseInteger
 {
-    public int Reverse(int num)
+    public BigInteger Reverse(BigInteger num)
     {
         var str = num.ToString();
 
@@ -20,7 +22,7 @@ public class ReverseInteger
             ? $"-{reverseStr}"
             : reverseStr;
 
-        var reverseNum = Convert.ToInt32(signedStr);
+        var reverseNum = BigInteger.Parse(signedStr);
 
         return reverseNum;
     }
