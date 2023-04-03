@@ -36,7 +36,7 @@ public class ReverseIntegerTests
     [Fact]
     public void GivenNumberThatOverFlows_ThenReturnsZero()
     {
-        BigInteger num = 1534236469;
+        var num = 1534236469;
 
         var result = reverseInteger.Reverse(num);
 

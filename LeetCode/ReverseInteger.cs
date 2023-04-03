@@ -4,7 +4,8 @@ namespace LeetCode;
 
 public class ReverseInteger
 {
-    public int Reverse(BigInteger num)
+    // A simpler but less memory efficient solution
+    public int ReverseSimple(int num)
     {
         var str = num.ToString();
 
@@ -28,5 +29,23 @@ public class ReverseInteger
             return 0;
 
         return (int)reverseBigNum;
+    }
+
+    // A more complex but memory efficient solution
+    public int Reverse(int num)
+    {
+        long reversed = 0;
+        while (num != 0)
+        {
+            reversed = reversed * 10 + num % 10;
+            num /= 10;
+
+            // Check for overflow
+            if (reversed > int.MaxValue || reversed < int.MinValue)
+            {
+                return 0;
+            }
+        }
+        return (int)reversed;
     }
 }
