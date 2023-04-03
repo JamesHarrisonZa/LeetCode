@@ -34,13 +34,13 @@ public class ReverseIntegerTests
     }
 
     [Fact]
-    public void GivenLargeNumber()
+    public void GivenNumberThatOverFlows_ThenReturnsZero()
     {
         BigInteger num = 1534236469;
 
         var result = reverseInteger.Reverse(num);
 
-        BigInteger expected = 9646324351;
+        var expected = 0;
         result.Should().Be(expected);
     }
 }

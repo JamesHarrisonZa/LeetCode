@@ -4,7 +4,7 @@ namespace LeetCode;
 
 public class ReverseInteger
 {
-    public BigInteger Reverse(BigInteger num)
+    public int Reverse(BigInteger num)
     {
         var str = num.ToString();
 
@@ -22,8 +22,11 @@ public class ReverseInteger
             ? $"-{reverseStr}"
             : reverseStr;
 
-        var reverseNum = BigInteger.Parse(signedStr);
+        var reverseBigNum = BigInteger.Parse(signedStr);
 
-        return reverseNum;
+        if (reverseBigNum > int.MaxValue || reverseBigNum < int.MinValue)
+            return 0;
+
+        return (int)reverseBigNum;
     }
 }
